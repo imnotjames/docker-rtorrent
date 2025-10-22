@@ -110,7 +110,7 @@ RUN apk --update --no-cache add \
 COPY rootfs /
 
 
-VOLUME [ "/config", "/downloads" ]
+VOLUME [ "/config", "/downloads/complete", "/downloads/incomplete" ]
 ENTRYPOINT [ "/init" ]
 
 HEALTHCHECK \
