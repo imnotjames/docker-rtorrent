@@ -112,10 +112,18 @@ RUN apk --update --no-cache add \
     gettext \
     openssl \
     util-linux \
-    xmlrpc-c-tools \
-  && addgroup -g ${PGID} rtorrent \
-  && adduser -D -H -u ${PUID} -G rtorrent -s /bin/sh rtorrent \
-  && rm -rf /tmp/*
+    xmlrpc-c-tools
+
+
+# Set up the rtorrent user
+RUN addgroup -g ${PGID} rtorrent
+RUN adduser -D -H -u ${PUID} -G rtorrent -s /bin/sh rtorrent
+RUN addgroup rtorrent tty
+
+# Ensure nginx is in rtorrent group to read the scgi socket and tty for logs
+RUN addgroup nginx rtorrent
+RUN addgroup nginx tty
+
 
 COPY rootfs /
 

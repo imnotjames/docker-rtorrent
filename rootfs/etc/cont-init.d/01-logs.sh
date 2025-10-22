@@ -1,8 +1,5 @@
 #!/bin/bash
 
-mkdir -p /var/logs/nginx
-chown -R rtorrent:rtorrent /var/logs/nginx
-
 mkdir -p /var/logs/rtorrent
 chown -R rtorrent:rtorrent /var/logs/rtorrent
 
