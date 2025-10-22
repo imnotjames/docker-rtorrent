@@ -37,4 +37,4 @@ docker image.
 
 MIT; See `LICENSE` for more details.
 
-rtorrent: https://github.com/rakshasa/
+[rtorrent]: https://github.com/rakshasa/
