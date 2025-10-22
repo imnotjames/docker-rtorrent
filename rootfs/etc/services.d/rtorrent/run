@@ -1,0 +1,9 @@
+#!/usr/bin/execlineb -P
+with-contenv
+export HOME /config/rtorrent
+export PWD /config/rtorrent
+s6-setuidgid rtorrent
+rtorrent -D -I -n \
+    -o "import=/etc/rtorrent/rtorrent.rc" \
+    $(find rootfs/etc/template/rtorrent/conf.d/ -type f | xargs -n1 printf "-o import=%s")
+sleep 5

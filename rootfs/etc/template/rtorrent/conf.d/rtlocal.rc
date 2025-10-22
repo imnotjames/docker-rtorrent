@@ -1,0 +1,13 @@
+network.xmlrpc.size_limit.set =  {{ XMLRPC_SIZE_LIMIT }}
+
+network.send_buffer.size.set = {{ RT_SEND_BUFFER_SIZE }}
+network.receive_buffer.size.set = {{ RT_RECEIVE_BUFFER_SIZE }}
+
+system.file.allocate.set = {{ RT_PREALLOCATE_TYPE }}
+
+network.port_range.set = {{ RT_PEER_PORT }}-{{ RT_PEER_PORT }}
+network.port_random.set = no
+
+dht.port.set = {{ RT_DHT_PORT }}
+
+schedule2 = session_save, 1200, {{ RT_SESSION_SAVE_SECONDS }}, ((session.save))

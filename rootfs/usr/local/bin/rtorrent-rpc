@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+
+xmlrpc http://127.0.0.1:${XMLRPC_PORT:-8000} $@

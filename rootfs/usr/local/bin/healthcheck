@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+
+rtorrent-rpc system.api_version
