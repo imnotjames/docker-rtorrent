@@ -81,10 +81,26 @@ FROM alpine:${ALPINE_VERSION} AS run
 COPY --from=s6-overlay /dist /
 COPY --from=builder /dist /
 
-ENV TZ="UTC" \
-  PUID="1000" \
-  PGID="1000" \
-  S6_VERBOSITY=1
+ENV TZ="UTC"
+ENV PUID="1000"
+ENV PGID="1000"
+ENV S6_VERBOSITY=1
+
+ENV XMLRPC_PORT="8000"
+ENV XMLRPC_SIZE_LIMIT="1M"
+
+ENV REAL_IP_FROM="0.0.0.0/32"
+ENV REAL_IP_HEADER="X-Forwarded-For"
+
+ENV LOG_IP_VAR="remote_addr"
+
+ENV RT_SEND_BUFFER_SIZE="4M"
+ENV RT_RECEIVE_BUFFER_SIZE="4M"
+ENV RT_PREALLOCATE_TYPE="0"
+ENV RT_PEER_PORT="50000"
+ENV RT_DHT_PORT="6881"
+ENV RT_SESSION_SAVE_SECONDS="3600"
+
 
 # increase rmem_max and wmem_max for rTorrent configuration
 RUN echo "net.core.rmem_max = 67108864" >> /etc/sysctl.conf \
