@@ -18,7 +18,6 @@ ADD https://github.com/rakshasa/libtorrent/archive/refs/tags/v${LIBTORRENT_VERSI
 RUN tar xf /tmp/libtorrent.tar.gz -C /src/ --strip-components=1
 
 FROM src AS src-rtorrent
-RUN git init . && git remote add origin "https://github.com/rakshasa/rtorrent.git"
 ARG RTORRENT_VERSION
 ADD https://github.com/rakshasa/rtorrent/archive/refs/tags/v${RTORRENT_VERSION}.tar.gz /tmp/rtorrent.tar.gz
 RUN tar xf /tmp/rtorrent.tar.gz -C /src/ --strip-components=1
