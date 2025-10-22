@@ -9,7 +9,7 @@ ARG S6_OVERLAY_VERSION="3.2.1.0"
 ARG ALPINE_VERSION="3.22"
 
 FROM --platform=${BUILDPLATFORM} alpine:${ALPINE_VERSION} AS src
-RUN apk --update --no-cache add curl git tar tree sed xz
+RUN apk --update --no-cache add tar xx
 WORKDIR /src
 
 FROM src AS src-libtorrent
