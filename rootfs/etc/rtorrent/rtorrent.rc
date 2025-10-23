@@ -58,7 +58,4 @@ method.insert = d.get_finished_dir, simple, "cat=$cfg.download_complete=,$d.cust
 method.insert = d.move_to_complete, simple, "d.directory.set=$argument.1=; execute=mkdir,-p,$argument.1=; execute=mv,-u,$argument.0=,$argument.1=; d.save_full_session="
 method.set_key = event.download.finished,move_complete,"d.move_to_complete=$d.data_path=,$d.get_finished_dir="
 
-
 network.bind_address.set = 0.0.0.0
-network.scgi.open_local = (cat, (cfg.rundir), "scgi.socket")
-schedule2 = scgi_permission, 0, 0, (cat,"execute.nothrow=chmod,\"g+w,o=\",",(cfg.rundir),"scgi.socket")

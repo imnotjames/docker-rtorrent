@@ -17,6 +17,7 @@ docker image.
 | `XMLRPC_PORT` | `8000` | Port to run the XML-RPC server on. |
 | `XMLRPC_REAL_IP_FROM` | `0.0.0.0/32` | Trusted addresses for "real" IP addresses. |
 | `XMLRPC_REAL_IP_HEADER` | `X-Forwarded-For` | Request header to use for "real" IP address. |
+| `XMLRPC_SCGI_LISTEN` | `127.0.0.1:5000` | TCP address and port the XML-RPC SCGI socket listens on. |
 | `XMLRPC_SIZE_LIMIT | `1M` | Size limit for XML-RPC requests. |
 | `RT_SEND_BUFFER_SIZE` | `4M` | Sets the rTorrent `wmem` value. |
 | `RT_RECEIVE_BUFFER_SIZE` | `4M` | Sets the rTorrent `rmem` value. |

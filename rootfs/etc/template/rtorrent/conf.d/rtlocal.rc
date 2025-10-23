@@ -1,3 +1,5 @@
+network.scgi.open_port = "{{ XMLRPC_SCGI_LISTEN }}"
+
 network.xmlrpc.size_limit.set =  {{ XMLRPC_SIZE_LIMIT }}
 
 network.send_buffer.size.set = {{ RT_SEND_BUFFER_SIZE }}
