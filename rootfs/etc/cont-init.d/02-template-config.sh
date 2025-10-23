@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/with-contenv /bin/bash
 
 export XMLRPC_PORT=${XMLRPC_PORT:-8000}
 export XMLRPC_REAL_IP_FROM=${XMLRPC_REAL_IP_FROM:-0.0.0.0/32}
