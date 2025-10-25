@@ -1,6 +1,6 @@
 #!/bin/bash
-export HOME=/config/rtorrent
-export PWD=/config/rtorrent
+export HOME=/config
+export PWD=/config
 
 s6-setuidgid rtorrent \
 rtorrent -D -I -n \
