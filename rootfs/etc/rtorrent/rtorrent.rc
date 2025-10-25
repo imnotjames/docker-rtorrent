@@ -61,5 +61,5 @@ method.set_key = event.download.finished,move_complete,"d.move_to_complete=$d.da
 network.bind_address.set = 0.0.0.0
 
 # Log to stdout
-log.open_file = "log","/proc/self/fd/1"
-log.add_output = "rpc_events","log"
+log.open_file = "stdout","/proc/self/fd/1"
+log.add_output = "rpc_events","stdout"
