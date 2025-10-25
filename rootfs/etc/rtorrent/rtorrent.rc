@@ -50,6 +50,9 @@ method.insert = cfg.rundir, private|const|string, (cat,"/var/run/rtorrent/")
 # Gets the full path of data of a torrent (it's a workaround for the possibly empty 'd.base_path' attribute)
 method.insert = d.data_path, simple, "if=(d.is_multi_file), (cat,(d.directory),/), (cat,(d.directory),/,(d.name))"
 
+# Default session directory
+session.path.set = (cat,(cfg.session))
+
 # Default directory to save the downloaded torrents
 directory.default.set = (cat,(cfg.download_incomplete))
 
