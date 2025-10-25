@@ -13,3 +13,5 @@ network.port_random.set = no
 dht.port.set = {{ RT_DHT_PORT }}
 
 schedule2 = session_save, 1200, {{ RT_SESSION_SAVE_SECONDS }}, ((session.save))
+
+{{ RT_EXTRA_CONFIG }}
