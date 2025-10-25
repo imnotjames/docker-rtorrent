@@ -1,6 +1,13 @@
 #!/bin/bash
 
-mkdir -p /config/session
-mkdir -p /config/watch
-mkdir -p /downloads/complete
-mkdir -p /downloads/incomplete
+mkdir -p \
+    /config/session \
+    /config/watch \
+    /downloads/complete \
+    /downloads/incomplete
+
+chown rtorrent:rtorrent \
+    /config/session \
+    /config/watch \
+    /downloads/complete \
+    /downloads/incomplete
