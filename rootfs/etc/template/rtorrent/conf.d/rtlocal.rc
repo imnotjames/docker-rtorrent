@@ -14,4 +14,6 @@ dht.port.set = {{ RT_DHT_PORT }}
 
 schedule2 = session_save, 1200, {{ RT_SESSION_SAVE_SECONDS }}, ((session.save))
 
+log.add_output = "{{ RT_LOG_LEVEL }}","stdout"
+
 {{ RT_EXTRA_CONFIG }}

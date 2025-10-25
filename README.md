@@ -25,6 +25,7 @@ docker image.
 | `RT_PEER_PORT` | `50000` | Port to listen for Torrent peer connections on. |
 | `RT_DHT_PORT` | `6881` | Port to listen for DHT connections on. |
 | `RT_SESSION_SAVE_SECONDS` | `3600` | Frequency to persist torrent information. |
+| `RT_LOG_LEVEL` | `error` | Log level to emit to stdout - one of `critical`, `error`, `warn`, `notice`, `info`, or `debug`. |
 | `RT_EXTRA_CONFIG` | `` | Extra configuration values to inject into rTorrent. |
 
 ## Volumes
