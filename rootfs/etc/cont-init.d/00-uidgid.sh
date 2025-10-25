@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/with-contenv /bin/bash
 
 if [ -n "${PGID}" ] && [ "${PGID}" != "$(id -g rtorrent)" ]; then
   echo "Switching to PGID ${PGID}..."
