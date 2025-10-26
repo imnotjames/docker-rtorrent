@@ -130,10 +130,11 @@ RUN addgroup nginx tty
 
 COPY rootfs /
 
-RUN mkdir /config && chown rtorrent:rtorrent /config
-RUN mkdir /downloads && chown rtorrent:rtorrent /downloads
+VOLUME "/watch"
+VOLUME "/session"
+VOLUME "/downloads/complete"
+VOLUME "/downloads/incomplete"
 
-VOLUME [ "/config", "/downloads/complete", "/downloads/incomplete" ]
 ENTRYPOINT [ "/init" ]
 
 HEALTHCHECK \
