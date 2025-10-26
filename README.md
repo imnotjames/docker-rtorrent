@@ -32,7 +32,8 @@ docker image.
 
 | Name | Description |
 | ---- | ----------- |
-| `/config` | Persistent configuration and currently active torrent session information. |
+| `/session` | Session data such as currently active torrents and DHT data. |
+| `/watch` | Watched folder for torrents to automatically add to rTorrent. |
 | `/downloads/complete` | Completed transfers. |
 | `/downloads/incomplete` | Temporary space for incomplete transfers. |
 
